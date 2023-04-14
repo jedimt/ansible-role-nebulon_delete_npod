@@ -1,0 +1,4 @@
+---
+# defaults file for ansible-role-nebulon_delete_npod
+
+npod_name: ""

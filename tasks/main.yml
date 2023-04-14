@@ -1,0 +1,10 @@
+---
+# tasks file for ansible-role-nebulon_delete_npod
+
+- name: Delete nPod
+  nebulon.nebulon_on.neb_npod:
+    neb_username: "{{ vault_neb_username }}"
+    neb_password: "{{ vault_neb_password }}"
+    name: "{{ npod_name | default('K8s_Lenovo') }}"
+    state: absent
+  register: npod_data
